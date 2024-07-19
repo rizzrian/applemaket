@@ -1,7 +1,11 @@
 plugins {
+
     alias(libs.plugins.android.application)
+
     alias(libs.plugins.jetbrains.kotlin.android)
+    id("kotlin-parcelize")
 }
+
 
 android {
     namespace = "com.example.applemaket"
@@ -33,14 +37,12 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
-
+ viewBinding{
+     enable = true
+ }
 
 }
-android {
-    buildFeatures {
-        viewBinding= true
-    }
-}
+
 
 dependencies {
 
